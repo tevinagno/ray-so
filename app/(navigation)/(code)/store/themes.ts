@@ -37,6 +37,8 @@ import NuxtLogo from "../assets/nuxt.svg";
 import NuxtLogoUrl from "../assets/nuxt.svg?url";
 import StripeLogo from "../assets/stripe/logo.svg";
 import StripeLogoUrl from "../assets/stripe/logo.svg?url";
+import AgnoLogo from "../assets/agno.svg";
+import AgnoLogoUrl from "../assets/agno.svg?url";
 import { showLineNumbersAtom } from ".";
 import { createCssVariablesTheme } from "../util/theme-css-variables";
 import { BASE_URL } from "@/utils/common";
@@ -1545,6 +1547,55 @@ export const THEMES: { [index: string]: Theme } = {
         property: "#a7a7a7",
         diffInserted: "#a7a7a7",
         diffDeleted: "#a7a7a7",
+      }),
+    },
+  },
+  agno: {
+    id: "agno",
+    name: "Agno",
+    background: {
+      from: "#FFFFFF",
+      to: "#FFFFFF",
+    },
+    icon: AgnoLogo,
+    iconUrl: AgnoLogoUrl,
+    font: "jetbrains-mono",
+    syntax: {
+      light: convertToShikiTheme({
+        foreground: "#111113",
+        constant: "#FF4017",
+        string: "#FF4017",
+        comment: "#9B9BA1",
+        keyword: "#46AD8C",
+        parameter: "#111113",
+        function: "#FF4017",
+        stringExpression: "#FF4017",
+        punctuation: "#46AD8C",
+        link: "#46AD8C",
+        number: "#111113",
+        property: "#46AD8C",
+        objectLiteral: "#46AD8C",
+        highlight: "rgba(255, 64, 23, 0.08)",
+        highlightHover: "rgba(255, 64, 23, 0.05)",
+        highlightBorder: "rgba(255, 64, 23, 0.3)",
+      }),
+      dark: convertToShikiTheme({
+        foreground: "#FAFAFA",
+        constant: "#FF4017",
+        string: "#FF4017",
+        comment: "#73737B",
+        keyword: "#46AD8C",
+        parameter: "#FAFAFA",
+        function: "#FF4017",
+        stringExpression: "#FF4017",
+        punctuation: "#46AD8C",
+        link: "#46AD8C",
+        number: "#FAFAFA",
+        property: "#46AD8C",
+        objectLiteral: "#46AD8C",
+        highlight: "rgba(255, 64, 23, 0.14)",
+        highlightHover: "rgba(255, 64, 23, 0.08)",
+        highlightBorder: "rgba(255, 64, 23, 0.45)",
       }),
     },
   },

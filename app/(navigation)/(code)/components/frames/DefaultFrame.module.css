@@ -176,3 +176,31 @@
     --dot-color: rgba(255, 255, 255, 0.09);
   }
 }
+
+.agno {
+  --frame-background: rgba(250, 250, 250, 0.9);
+  --frame-control-color: rgba(36, 41, 48, 0.2);
+  --frame-title-color: rgba(36, 41, 48, 0.55);
+  --frame-title-placeholder-color: rgba(36, 41, 48, 0.3);
+  --frame-shadow-border: rgba(28, 30, 35, 0.12);
+  --frame-highlight-border: rgba(255, 255, 255, 0.65);
+
+  &.withBackground {
+    background: radial-gradient(119.34% 180.67% at 50% 242.9%, #ff4017 0%, #fff 100%) !important;
+    background-color: #ffffff !important;
+  }
+
+  &.darkMode {
+    --frame-background: rgba(17, 17, 19, 0.9);
+    --frame-control-color: rgba(235, 238, 244, 0.2);
+    --frame-title-color: rgba(235, 238, 244, 0.62);
+    --frame-title-placeholder-color: rgba(235, 238, 244, 0.3);
+    --frame-shadow-border: rgba(0, 0, 0, 0.72);
+    --frame-highlight-border: rgba(255, 255, 255, 0.2);
+  }
+
+  &.darkMode.withBackground {
+    background: radial-gradient(119.34% 180.67% at 50% 242.9%, #ff4017 0%, #111113 100%) !important;
+    background-color: #111113 !important;
+  }
+}

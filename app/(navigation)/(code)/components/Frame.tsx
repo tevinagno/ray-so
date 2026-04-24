@@ -10,6 +10,7 @@ import BrowserbaseFrame from "./frames/BrowserbaseFrame";
 import ClerkFrame from "./frames/ClerkFrame";
 import CloudflareFrame from "./frames/CloudflareFrame";
 import DefaultFrame from "./frames/DefaultFrame";
+import AgnoFrame from "./frames/AgnoFrame";
 import ElevenLabsFrame from "./frames/ElevenLabsFrame";
 import FirecrawlFrame from "./frames/FirecrawlFrame";
 import GeminiFrame from "./frames/GeminiFrame";
@@ -66,6 +67,8 @@ const Frame = ({ resize = true }: { resize?: boolean }) => {
         return <StripeFrame />;
       case THEMES.firecrawl.id:
         return <FirecrawlFrame />;
+      case THEMES.agno.id:
+        return <AgnoFrame />;
       default:
         return <DefaultFrame />;
     }
