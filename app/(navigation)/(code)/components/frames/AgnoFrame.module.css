@@ -2,20 +2,12 @@
   position: relative;
   overflow: visible;
   --agno-line-color: rgba(24, 24, 27, 0.1);
-  --agno-marker-color: #18181b;
-  --agno-marker-size: 12px;
-  --agno-marker-half: 6px;
-  --agno-marker-clearance: 8px;
-  --agno-line-cutout: min(
-    calc(var(--agno-marker-half) + var(--agno-marker-clearance)),
-    calc(var(--frame-padding) - 1px)
-  );
+  --agno-side-line-offset: 8px;
   background: radial-gradient(119.34% 180.67% at 50% 242.9%, #ff4017 0%, #fff 100%);
 }
 
 .darkMode {
   --agno-line-color: rgba(250, 250, 250, 0.15);
-  --agno-marker-color: #fafafa;
   background: radial-gradient(119.34% 180.67% at 50% 242.9%, #ff4017 0%, #111113 100%);
 }
 
@@ -38,137 +30,16 @@
   background: var(--agno-line-color);
 }
 
-.marker {
-  position: absolute;
-  width: var(--agno-marker-size);
-  height: var(--agno-marker-size);
-  transform: translate(-50%, -50%);
-}
-
-.marker::before {
-  position: absolute;
-  top: calc(50% - 0.7px);
-  left: 0;
-  width: 100%;
-  border-top: 1.4px solid var(--agno-marker-color);
-  content: "";
-}
-
-.marker::after {
-  position: absolute;
+.leftLine {
   top: 0;
-  left: calc(50% - 0.7px);
-  height: 100%;
-  border-left: 1.4px solid var(--agno-marker-color);
-  content: "";
-}
-
-.topLeft {
-  top: var(--frame-padding);
-  left: var(--frame-padding);
-}
-
-.topRight {
-  top: var(--frame-padding);
-  left: calc(100% - var(--frame-padding));
-}
-
-.bottomLeft {
-  top: calc(100% - var(--frame-padding));
-  left: var(--frame-padding);
-}
-
-.bottomRight {
-  top: calc(100% - var(--frame-padding));
-  left: calc(100% - var(--frame-padding));
-}
-
-.topLeftLine,
-.topCenterLine,
-.topRightLine,
-.bottomLeftLine,
-.bottomCenterLine,
-.bottomRightLine {
-  height: 1.4px;
-}
-
-.leftTopLine,
-.leftCenterLine,
-.leftBottomLine,
-.rightTopLine,
-.rightCenterLine,
-.rightBottomLine {
+  left: max(0px, calc(var(--frame-padding) - var(--agno-side-line-offset)));
   width: 1.4px;
+  height: 100%;
 }
 
-.topLeftLine {
-  top: var(--frame-padding);
-  left: 0;
-  width: max(0px, calc(var(--frame-padding) - var(--agno-line-cutout)));
-}
-
-.topCenterLine {
-  top: var(--frame-padding);
-  left: calc(var(--frame-padding) + var(--agno-line-cutout));
-  width: max(0px, calc(100% - (2 * var(--frame-padding)) - (2 * var(--agno-line-cutout))));
-}
-
-.topRightLine {
-  top: var(--frame-padding);
-  right: 0;
-  width: max(0px, calc(var(--frame-padding) - var(--agno-line-cutout)));
-}
-
-.bottomLeftLine {
-  bottom: var(--frame-padding);
-  left: 0;
-  width: max(0px, calc(var(--frame-padding) - var(--agno-line-cutout)));
-}
-
-.bottomCenterLine {
-  bottom: var(--frame-padding);
-  left: calc(var(--frame-padding) + var(--agno-line-cutout));
-  width: max(0px, calc(100% - (2 * var(--frame-padding)) - (2 * var(--agno-line-cutout))));
-}
-
-.bottomRightLine {
-  right: 0;
-  bottom: var(--frame-padding);
-  width: max(0px, calc(var(--frame-padding) - var(--agno-line-cutout)));
-}
-
-.leftTopLine {
+.rightLine {
   top: 0;
-  left: var(--frame-padding);
-  height: max(0px, calc(var(--frame-padding) - var(--agno-line-cutout)));
-}
-
-.leftCenterLine {
-  top: calc(var(--frame-padding) + var(--agno-line-cutout));
-  left: var(--frame-padding);
-  height: max(0px, calc(100% - (2 * var(--frame-padding)) - (2 * var(--agno-line-cutout))));
-}
-
-.leftBottomLine {
-  bottom: 0;
-  left: var(--frame-padding);
-  height: max(0px, calc(var(--frame-padding) - var(--agno-line-cutout)));
-}
-
-.rightTopLine {
-  top: 0;
-  right: var(--frame-padding);
-  height: max(0px, calc(var(--frame-padding) - var(--agno-line-cutout)));
-}
-
-.rightCenterLine {
-  top: calc(var(--frame-padding) + var(--agno-line-cutout));
-  right: var(--frame-padding);
-  height: max(0px, calc(100% - (2 * var(--frame-padding)) - (2 * var(--agno-line-cutout))));
-}
-
-.rightBottomLine {
-  right: var(--frame-padding);
-  bottom: 0;
-  height: max(0px, calc(var(--frame-padding) - var(--agno-line-cutout)));
+  right: max(0px, calc(var(--frame-padding) - var(--agno-side-line-offset)));
+  width: 1.4px;
+  height: 100%;
 }

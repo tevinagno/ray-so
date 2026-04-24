@@ -30,22 +30,8 @@ const AgnoFrame = () => {
       </div>
       {showBackground && (
         <div className={styles.overlay} aria-hidden>
-          <span className={classNames(styles.line, styles.topLeftLine)}></span>
-          <span className={classNames(styles.line, styles.topCenterLine)}></span>
-          <span className={classNames(styles.line, styles.topRightLine)}></span>
-          <span className={classNames(styles.line, styles.bottomLeftLine)}></span>
-          <span className={classNames(styles.line, styles.bottomCenterLine)}></span>
-          <span className={classNames(styles.line, styles.bottomRightLine)}></span>
-          <span className={classNames(styles.line, styles.leftTopLine)}></span>
-          <span className={classNames(styles.line, styles.leftCenterLine)}></span>
-          <span className={classNames(styles.line, styles.leftBottomLine)}></span>
-          <span className={classNames(styles.line, styles.rightTopLine)}></span>
-          <span className={classNames(styles.line, styles.rightCenterLine)}></span>
-          <span className={classNames(styles.line, styles.rightBottomLine)}></span>
-          <span className={classNames(styles.marker, styles.topLeft)}></span>
-          <span className={classNames(styles.marker, styles.topRight)}></span>
-          <span className={classNames(styles.marker, styles.bottomLeft)}></span>
-          <span className={classNames(styles.marker, styles.bottomRight)}></span>
+          <span className={classNames(styles.line, styles.leftLine)}></span>
+          <span className={classNames(styles.line, styles.rightLine)}></span>
         </div>
       )}
     </div>
